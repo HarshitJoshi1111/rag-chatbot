@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask the Regulations</title>
+<style>
+  :root { --bg:#f7f7f5; --card:#fff; --ink:#1d1d1b; --muted:#6b6b66; --line:#e3e3de; --accent:#2f5d50; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#161615; --card:#1f1f1d; --ink:#ececea; --muted:#9a9a94; --line:#33332f; --accent:#7fb8a4; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font:15px/1.55 system-ui, sans-serif; background:var(--bg); color:var(--ink); }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 120px; }
+  h1 { font-size:22px; margin:0 0 4px; } .sub { color:var(--muted); margin:0 0 24px; }
+  .msg { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:12px 0; white-space:pre-wrap; }
+  .q { border-left:3px solid var(--accent); }
+  .sources { font-size:13px; color:var(--muted); margin-top:10px; white-space:normal; }
+  .sources li { margin:4px 0; }
+  form { position:fixed; bottom:0; left:0; right:0; background:var(--bg); border-top:1px solid var(--line); padding:12px 16px; }
+  .row { max-width:760px; margin:0 auto; display:flex; gap:8px; }
+  input { flex:1; padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); font:inherit; }
+  button { padding:10px 18px; border:0; border-radius:8px; background:var(--accent); color:#fff; font:inherit; cursor:pointer; }
+  button:disabled { opacity:.5; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Ask the Regulations</h1>
+  <p class="sub">Ask in English or German. Every answer cites the document and page it came from.</p>
+  <div id="log"></div>
+</main>
+<form id="f">
+  <div class="row">
+    <input id="q" placeholder="e.g. How many ECTS do I need before the internship semester?" autocomplete="off" required>
+    <button id="b">Ask</button>
+  </div>
+</form>
+<script>
+const log = document.getElementById('log'), q = document.getElementById('q'), b = document.getElementById('b');
+function add(cls, text) { const d = document.createElement('div'); d.className = 'msg ' + cls; d.textContent = text; log.appendChild(d); d.scrollIntoView({behavior:'smooth'}); return d; }
+document.getElementById('f').addEventListener('submit', async e => {
+  e.preventDefault();
+  const question = q.value.trim(); if (!question) return;
+  add('q', question); q.value = ''; b.disabled = true;
+  const box = add('a', 'Thinking…');
+  try {
+    const r = await fetch('/ask', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({question}) });
+    if (!r.ok) throw new Error((await r.json()).detail || r.statusText);
+    const data = await r.json();
+    box.textContent = data.answer;
+    const ul = document.createElement('ul'); ul.className = 'sources';
+    data.sources.forEach(s => { const li = document.createElement('li'); li.textContent = `[${s.n}] ${s.doc_name}${s.page ? ', p. ' + s.page : ''}`; ul.appendChild(li); });
+    const meta = document.createElement('div'); meta.className = 'sources'; meta.textContent = `${data.latency_ms} ms`;
+    box.appendChild(ul); box.appendChild(meta);
+  } catch (err) { box.textContent = 'Error: ' + err.message; }
+  b.disabled = false; q.focus();
+});
+</script>
+</body>
+</html>
