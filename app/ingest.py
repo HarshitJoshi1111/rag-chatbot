@@ -2,6 +2,7 @@
 
 Run from the project root:  python -m app.ingest data/
 """
+import re
 import sys
 from pathlib import Path
 
@@ -14,11 +15,28 @@ from app.embeddings import embed_passages
 
 SUPPORTED = {".pdf", ".txt", ".md"}
 
-_splitter = RecursiveCharacterTextSplitter(
-    chunk_size=CHUNK_SIZE,
-    chunk_overlap=CHUNK_OVERLAP,
-    separators=["\n\n", "\n", ". ", " ", ""],  # prefer paragraph, then sentence boundaries
-)
+
+# PDF text cleanup (German legal documents)
+_PAGE_HEADER = re.compile(r"Seite \d+ von \d+")                                  # "Seite 3 von 12"
+_SENTENCE_NUMBER = re.compile(r"(?<![\w§.,])\d{1,2}(?=[A-ZÄÖÜ][a-zäöüß])")      # "1Das" -> "Das"
+_LINE_HYPHEN = re.compile(r"(\w) ?- (?!und\b|oder\b|bzw\b|sowie\b)([a-zäöüß])")  # "Prak- tikum" -> "Praktikum"
+
+
+def clean_text(text: str) -> str:
+    text = " ".join(text.split())  # collapse PDF line-break noise
+    text = _PAGE_HEADER.sub(" ", text)
+    text = _SENTENCE_NUMBER.sub("", text)
+    text = _LINE_HYPHEN.sub(r"\1\2", text)
+    return " ".join(text.split())
+
+
+def make_splitter(chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP) -> RecursiveCharacterTextSplitter:
+    return RecursiveCharacterTextSplitter(
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
+        separators=["\n\n", "\n", ". ", " ", ""],  # prefer paragraph, then sentence boundaries
+        keep_separator="end",  # keep the full stop with its sentence instead of starting the next chunk
+    )
 
 
 def load_pages(path: Path) -> list[tuple[int | None, str]]:
@@ -29,11 +47,14 @@ def load_pages(path: Path) -> list[tuple[int | None, str]]:
     return [(None, path.read_text(encoding="utf-8", errors="ignore"))]
 
 
-def chunk_document(path: Path) -> list[dict]:
+def chunk_document(
+    path: Path, chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP, clean: bool = True
+) -> list[dict]:
+    splitter = make_splitter(chunk_size, chunk_overlap)
     chunks = []
     for page, text in load_pages(path):
-        text = " ".join(text.split())  # collapse PDF line-break noise
-        for piece in _splitter.split_text(text):
+        text = clean_text(text) if clean else " ".join(text.split())
+        for piece in splitter.split_text(text):
             if len(piece) >= 50:  # skip headers/footers and empty fragments
                 chunks.append({"doc_name": path.name, "page": page, "content": piece})
     for i, c in enumerate(chunks):
@@ -41,8 +62,10 @@ def chunk_document(path: Path) -> list[dict]:
     return chunks
 
 
-def ingest_file(conn, path: Path) -> int:
-    chunks = chunk_document(path)
+def ingest_file(
+    conn, path: Path, chunk_size: int = CHUNK_SIZE, chunk_overlap: int = CHUNK_OVERLAP, clean: bool = True
+) -> int:
+    chunks = chunk_document(path, chunk_size, chunk_overlap, clean)
     if not chunks:
         print(f"  ! no text found in {path.name} (scanned PDF? needs OCR)")
         return 0
@@ -66,6 +89,9 @@ def ingest_path(target: Path) -> None:
         for f in files:
             n = ingest_file(conn, f)
             print(f"  {f.name}: {n} chunks")
+        # Re-ingesting deletes rows; rebuild the indexes so the HNSW graph has no stale entries.
+        conn.execute("REINDEX TABLE chunks")
+        conn.execute("VACUUM ANALYZE chunks")
 
 
 if __name__ == "__main__":

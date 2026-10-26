@@ -1,13 +1,15 @@
-"""Retrieval evaluation: does the right page show up in the top-k results?
+"""Retrieval evaluation: does a correct page show up in the top-k results?
 
 Usage (from the project root, after ingesting your documents):
     python -m eval.run_eval eval/questions.jsonl
 
-Each line of the questions file:
+Each line of the questions file is one JSON object, either with a single correct page
     {"question": "...", "doc_name": "file.pdf", "page": 12}
+or with several acceptable locations (e.g. the same rule appears in two documents)
+    {"question": "...", "answer": "...", "relevant": [{"doc_name": "a.pdf", "page": 3}, {"doc_name": "b.pdf", "page": 3}]}
 
 Metrics:
-    hit@k  share of questions where the expected page is anywhere in the top k
+    hit@k  share of questions where a correct page is anywhere in the top k
     MRR    mean of 1/rank of the first correct hit (1.0 = always ranked first)
 """
 import json
@@ -18,29 +20,46 @@ from app.db import get_conn
 from app.retrieve import search
 
 
+def load_items(path: str) -> list[dict]:
+    with open(path, encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
+def relevant_locations(item: dict) -> list[dict]:
+    return item.get("relevant") or [{"doc_name": item["doc_name"], "page": item.get("page")}]
+
+
 def is_match(hit: dict, item: dict) -> bool:
-    if hit["doc_name"] != item["doc_name"]:
-        return False
-    return item.get("page") is None or hit["page"] == item["page"]
+    for loc in relevant_locations(item):
+        if hit["doc_name"] == loc["doc_name"] and (loc.get("page") is None or hit["page"] == loc["page"]):
+            return True
+    return False
+
+
+def first_correct_rank(results: list[dict], item: dict) -> int | None:
+    return next((i for i, h in enumerate(results, start=1) if is_match(h, item)), None)
 
 
 def evaluate(items: list[dict], mode: str, k: int) -> dict:
-    hits, rr = 0, 0.0
+    ranks = []
     with get_conn() as conn:
         for item in items:
-            results = search(conn, item["question"], k, mode)
-            rank = next((i for i, h in enumerate(results, start=1) if is_match(h, item)), None)
-            if rank:
-                hits += 1
-                rr += 1 / rank
+            ranks.append(first_correct_rank(search(conn, item["question"], k, mode), item))
     n = len(items)
-    return {"mode": mode, "k": k, "questions": n, "hit_rate": round(hits / n, 3), "mrr": round(rr / n, 3)}
+    found = [r for r in ranks if r]
+    return {
+        "mode": mode,
+        "k": k,
+        "questions": n,
+        "hit_rate": round(len(found) / n, 3),
+        "mrr": round(sum(1 / r for r in found) / n, 3),
+        "ranks": ranks,
+    }
 
 
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else "eval/questions.jsonl"
-    with open(path, encoding="utf-8") as f:
-        items = [json.loads(line) for line in f if line.strip()]
+    items = load_items(path)
     if not items:
         sys.exit(f"No questions in {path}. Add one JSON object per line.")
     print(f"{'mode':<8} {'k':>3} {'hit@k':>7} {'MRR':>7}")

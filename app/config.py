@@ -17,8 +17,8 @@ LLM_BASE_URL = os.getenv("LLM_BASE_URL", "http://localhost:11434/v1")
 LLM_API_KEY = os.getenv("LLM_API_KEY", "ollama")  # Ollama ignores the key
 LLM_MODEL = os.getenv("LLM_MODEL", "llama3.2")
 
-CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "800"))  # characters
-CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "120"))
+CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "400"))  # characters; chosen in experiments/chunk_size.py
+CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "60"))
 TOP_K = int(os.getenv("TOP_K", "5"))
 
 DATA_DIR = os.getenv("DATA_DIR", "data")
