@@ -20,5 +20,6 @@ LLM_MODEL = os.getenv("LLM_MODEL", "llama3.2")
 CHUNK_SIZE = int(os.getenv("CHUNK_SIZE", "400"))  # characters; chosen in experiments/chunk_size.py
 CHUNK_OVERLAP = int(os.getenv("CHUNK_OVERLAP", "60"))
 TOP_K = int(os.getenv("TOP_K", "5"))
+KEYWORD_WEIGHT = float(os.getenv("KEYWORD_WEIGHT", "0.5"))  # weight of keyword results in hybrid search; see experiments/search_comparison.py
 
 DATA_DIR = os.getenv("DATA_DIR", "data")

@@ -1,0 +1,1677 @@
+{
+  "k": 5,
+  "depth": 20,
+  "total_chunks": 136,
+  "summary": {
+    "vector": {
+      "hit@5": 0.85,
+      "mrr@5": 0.772,
+      "found@20": 0.95
+    },
+    "keyword (all words)": {
+      "hit@5": 0.6,
+      "mrr@5": 0.504,
+      "found@20": 0.75
+    },
+    "keyword (content words)": {
+      "hit@5": 0.75,
+      "mrr@5": 0.499,
+      "found@20": 0.85
+    },
+    "hybrid (all words)": {
+      "hit@5": 0.85,
+      "mrr@5": 0.704,
+      "found@20": 1.0
+    },
+    "hybrid (content words)": {
+      "hit@5": 0.85,
+      "mrr@5": 0.647,
+      "found@20": 1.0
+    },
+    "hybrid + dedupe": {
+      "hit@5": 0.85,
+      "mrr@5": 0.65,
+      "found@20": 1.0
+    },
+    "hybrid kw x0.5": {
+      "hit@5": 0.85,
+      "mrr@5": 0.667,
+      "found@20": 1.0
+    },
+    "hybrid kw x0.25": {
+      "hit@5": 0.8,
+      "mrr@5": 0.671,
+      "found@20": 1.0
+    }
+  },
+  "questions": [
+    {
+      "question": "How many ECTS credits do I need to complete the bachelor's degree?",
+      "expected": "210 credits (§ 12 Abs. 2)",
+      "ranks": {
+        "vector": null,
+        "keyword (all words)": null,
+        "keyword (content words)": 3,
+        "hybrid (all words)": 15,
+        "hybrid (content words)": 12,
+        "hybrid + dedupe": 12,
+        "hybrid kw x0.5": 14,
+        "hybrid kw x0.25": 16
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.8: studienbegleitender LN Zulassungsvoraussetzungen 11 Algorithmen und Datenstrukturen (Algor",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien"
+        ],
+        "keyword (all words)": [
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des"
+        ],
+        "keyword (content words)": [
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü"
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des"
+        ]
+      },
+      "terms": [
+        "ects",
+        "credits",
+        "need",
+        "complete",
+        "bachelor",
+        "degree"
+      ],
+      "chunks_matched": {
+        "all words": 33,
+        "content words": 49
+      }
+    },
+    {
+      "question": "Wie viele Credits braucht man für den Bachelorabschluss?",
+      "expected": "genau 210 Credits (§ 12 Abs. 2)",
+      "ranks": {
+        "vector": 5,
+        "keyword (all words)": 17,
+        "keyword (content words)": 12,
+        "hybrid (all words)": 4,
+        "hybrid (content words)": 6,
+        "hybrid + dedupe": 6,
+        "hybrid kw x0.5": 6,
+        "hybrid kw x0.25": 6
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.5: 2 Satz 3 RaPO. (2) Die Bachelorprüfung hat bestanden, wer alle Prüfungsleistungen nach Anl"
+        ],
+        "keyword (all words)": [
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.3: Die gewählten Module werden wie Pflichtmodule behandelt. 3. Wahlmodule sind Module, die fü",
+          "TechnischeInformatik p.3: Die Regelungen werden für Wahlpflichtmodule durch den Wahlpflichtmodulkatalog und den Vert",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten"
+        ],
+        "keyword (content words)": [
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.5: 2 Satz 3 RaPO. (2) Die Bachelorprüfung hat bestanden, wer alle Prüfungsleistungen nach Anl",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu"
+        ]
+      },
+      "terms": [
+        "viele",
+        "credits",
+        "braucht",
+        "bachelorabschluss"
+      ],
+      "chunks_matched": {
+        "all words": 74,
+        "content words": 22
+      }
+    },
+    {
+      "question": "How long is the internship in the practical semester?",
+      "expected": "18 weeks (§ 5 Abs. 1)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": null,
+        "keyword (content words)": 4,
+        "hybrid (all words)": 4,
+        "hybrid (content words)": 3,
+        "hybrid + dedupe": 3,
+        "hybrid kw x0.5": 3,
+        "hybrid kw x0.25": 3
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule "
+        ],
+        "keyword (all words)": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun",
+          "TechnischeInformatik p.6: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag"
+        ],
+        "keyword (content words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au"
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu"
+        ],
+        "hybrid (content words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "TechnischeInformatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei"
+        ],
+        "hybrid + dedupe": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem"
+        ]
+      },
+      "terms": [
+        "long",
+        "internship",
+        "practical",
+        "semester"
+      ],
+      "chunks_matched": {
+        "all words": 64,
+        "content words": 8
+      }
+    },
+    {
+      "question": "Wie viele Wochen dauert das Praktikum im praktischen Studiensemester?",
+      "expected": "18 Wochen (§ 5 Abs. 1)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "keyword (all words)": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense"
+        ],
+        "keyword (content words)": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule "
+        ],
+        "hybrid (all words)": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V",
+          "TechnischeInformatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ]
+      },
+      "terms": [
+        "viele",
+        "wochen",
+        "dauert",
+        "praktikum",
+        "praktischen",
+        "studiensemester"
+      ],
+      "chunks_matched": {
+        "all words": 61,
+        "content words": 19
+      }
+    },
+    {
+      "question": "How many credits do I need before I am admitted to the internship?",
+      "expected": "at least 90 credits (§ 8 Abs. 3)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 3,
+        "keyword (content words)": 3,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu"
+        ],
+        "keyword (all words)": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten"
+        ],
+        "keyword (content words)": [
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I"
+        ]
+      },
+      "terms": [
+        "credits",
+        "need",
+        "before",
+        "admitted",
+        "internship"
+      ],
+      "chunks_matched": {
+        "all words": 33,
+        "content words": 22
+      }
+    },
+    {
+      "question": "Welche Voraussetzung gilt für die Zulassung zum Praktikum?",
+      "expected": "mindestens 90 Credits (§ 8 Abs. 3)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 7,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 3,
+        "hybrid + dedupe": 3,
+        "hybrid kw x0.5": 2,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S"
+        ],
+        "keyword (all words)": [
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "Informatik p.3: Der Fakultätsrat legt vor Beginn des Semesters fest, welche Mo dule zur Wahl durch die Stu"
+        ],
+        "keyword (content words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "hybrid (content words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so"
+        ],
+        "hybrid + dedupe": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so"
+        ],
+        "hybrid kw x0.5": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu"
+        ],
+        "hybrid kw x0.25": [
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S"
+        ]
+      },
+      "terms": [
+        "voraussetzung",
+        "gilt",
+        "zulassung",
+        "praktikum"
+      ],
+      "chunks_matched": {
+        "all words": 94,
+        "content words": 20
+      }
+    },
+    {
+      "question": "How long can I work on my bachelor's thesis?",
+      "expected": "max. 3 months, up to 5 months in special cases (§ 11 Abs. 4-5)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 8,
+        "keyword (content words)": 3,
+        "hybrid (all words)": 6,
+        "hybrid (content words)": 3,
+        "hybrid + dedupe": 3,
+        "hybrid kw x0.5": 2,
+        "hybrid kw x0.25": 2
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "TechnischeInformatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "TechnischeInformatik p.5: (4) Die Bearbeitungszeit für die schriftliche Ausarbeitung der Bachelorarbeit muss dem The",
+          "Informatik p.5: (4) Die Bearbeitungszeit für die schriftliche Ausarbeitung der Bachelorarbeit muss dem The"
+        ],
+        "keyword (all words)": [
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T"
+        ],
+        "keyword (content words)": [
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni"
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni"
+        ],
+        "hybrid (content words)": [
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "TechnischeInformatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "hybrid + dedupe": [
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V",
+          "Informatik p.5: (4) Die Bearbeitungszeit für die schriftliche Ausarbeitung der Bachelorarbeit muss dem The"
+        ],
+        "hybrid kw x0.5": [
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V",
+          "Informatik p.5: (4) Die Bearbeitungszeit für die schriftliche Ausarbeitung der Bachelorarbeit muss dem The"
+        ],
+        "hybrid kw x0.25": [
+          "TechnischeInformatik p.10: Elective Module 3) 5 4 1) 1) 1) 1) 1), 4) 2 32 Bachelorarbeit (Bachelor‘s Thesis) 15 32.1 ",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "Informatik p.5: (4) Die Bearbeitungszeit für die schriftliche Ausarbeitung der Bachelorarbeit muss dem The",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ]
+      },
+      "terms": [
+        "long",
+        "work",
+        "bachelor",
+        "thesis"
+      ],
+      "chunks_matched": {
+        "all words": 11,
+        "content words": 32
+      }
+    },
+    {
+      "question": "Darf die Bachelorarbeit auf Englisch geschrieben werden?",
+      "expected": "ja, mit Genehmigung der Prüferin/des Prüfers (§ 11 Abs. 7)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "TechnischeInformatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar"
+        ],
+        "keyword (all words)": [
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "TechnischeInformatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü"
+        ],
+        "keyword (content words)": [
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "TechnischeInformatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: (4) Die Bearbeitungszeit für die schriftliche Ausarbeitung der Bachelorarbeit muss dem The"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "TechnischeInformatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "TechnischeInformatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (4) Die Bearbeitungszeit für die schriftliche Ausarbeitung der Bachelorarbeit muss dem The"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.5: (7) Die Bachelorarbeit darf mit Genehmigung der Prüferin oder des Prüfers in englischer Sp",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü"
+        ]
+      },
+      "terms": [
+        "darf",
+        "bachelorarbeit",
+        "englisch",
+        "geschrieben",
+        "werden"
+      ],
+      "chunks_matched": {
+        "all words": 97,
+        "content words": 70
+      }
+    },
+    {
+      "question": "How many hours of work does one ECTS credit correspond to?",
+      "expected": "30 hours on average (§ 6 Abs. 1)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des"
+        ],
+        "keyword (all words)": [
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des",
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni"
+        ],
+        "keyword (content words)": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.3: Studiensemester statt. Es beinhaltet ein Praktikum im Umfang von 18 Wochen (Modul 22.1) so",
+          "TechnischeInformatik p.3: Soweit es sich um Module außerhalb des Curriculums des Studiengangs handelt, kann einer Be",
+          "Informatik p.3: § 7 Studienplan (1) Die Fakultät Informatik und Mathematik erstellt zur Sicherstellung des"
+        ]
+      },
+      "terms": [
+        "hours",
+        "work",
+        "one",
+        "ects",
+        "credit",
+        "correspond"
+      ],
+      "chunks_matched": {
+        "all words": 8,
+        "content words": 22
+      }
+    },
+    {
+      "question": "What level of English do applicants need?",
+      "expected": "B1 (CEFR) (§ 3 Abs. 3)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": null,
+        "keyword (content words)": null,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun"
+        ],
+        "keyword (all words)": [
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni"
+        ],
+        "keyword (content words)": [],
+        "hybrid (all words)": [
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun",
+          "Informatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 "
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun",
+          "Informatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 "
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun",
+          "Informatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 "
+        ]
+      },
+      "terms": [
+        "level",
+        "english",
+        "applicants",
+        "need"
+      ],
+      "chunks_matched": {
+        "all words": 2,
+        "content words": 0
+      }
+    },
+    {
+      "question": "Welche Deutschkenntnisse müssen ausländische Bewerber nachweisen?",
+      "expected": "DSH-1 oder gleichwertig (§ 3 Abs. 2)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 2,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun"
+        ],
+        "keyword (all words)": [
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au",
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "Informatik p.3: (3) Alle Module sind entweder Pflichtmodule, Wahlpflichtmodule oder Wahlmodule. 1. Pflicht",
+          "Informatik p.3: Der Fakultätsrat legt vor Beginn des Semesters fest, welche Mo dule zur Wahl durch die Stu",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw"
+        ],
+        "keyword (content words)": [
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "TechnischeInformatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "Informatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "Informatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "TechnischeInformatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.2: (2) Studienbewerberinnen und Studienbewerber, die ihre Hochschulzugangsberechtigung nicht ",
+          "Informatik p.2: § 3 Qualifikationsvoraussetzungen (1) Die Studienbewerberinnen und Studienbewerber müssen ",
+          "Informatik p.4: § 11 Bachelorarbeit (1) In der Bachelorarbeit sollen die Studierenden ihre Fähigkeit nachw",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "TechnischeInformatik p.2: Sie verfügen am Ende ihres Studiums nicht nur über Teamerfahrung, sondern auch über kommun"
+        ]
+      },
+      "terms": [
+        "deutschkenntnisse",
+        "müssen",
+        "ausländische",
+        "bewerber",
+        "nachweisen"
+      ],
+      "chunks_matched": {
+        "all words": 9,
+        "content words": 8
+      }
+    },
+    {
+      "question": "Which exams must be taken by the end of the second semester?",
+      "expected": "Mathematik 1 and Programmieren 1 (§ 8 Abs. 1)",
+      "ranks": {
+        "vector": 4,
+        "keyword (all words)": null,
+        "keyword (content words)": null,
+        "hybrid (all words)": 10,
+        "hybrid (content words)": 15,
+        "hybrid + dedupe": 14,
+        "hybrid kw x0.5": 11,
+        "hybrid kw x0.25": 7
+      },
+      "top5": {
+        "vector": [
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "Informatik p.2: (3) Der zweite Studienabschnitt erweitert die Grundlagen, lehrt spezielle Fachkenntnisse d",
+          "Informatik p.3: (4) Im dritten Studienabschnitt vertiefen die Studierenden ihre Kenntnisse durch die Wahlp",
+          "TechnischeInformatik p.4: § 9 Studienfachberatung (1) Studierende, die bis zum Ende des zweiten Fachsemesters noch k",
+          "TechnischeInformatik p.3: (3) Der zweite Studienabschnitt erweitert die Grun dlagen, lehrt spezielle Fachkenntnisse "
+        ],
+        "keyword (all words)": [
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.12: Abkürzungen Prüfungsleistungen BA Bachelorarbeit m.E. Bewertung mit/ohne Erfolg THE Take-H",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical"
+        ],
+        "keyword (content words)": [
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "Informatik p.3: Der Fakultätsrat legt vor Beginn des Semesters fest, welche Mo dule zur Wahl durch die Stu",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "Informatik p.12: Abkürzungen Prüfungsleistungen BA Bachelorarbeit m.E. Bewertung mit/ohne Erfolg THE Take-H",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "Informatik p.2: (3) Der zweite Studienabschnitt erweitert die Grundlagen, lehrt spezielle Fachkenntnisse d"
+        ]
+      },
+      "terms": [
+        "exams",
+        "must",
+        "taken",
+        "end",
+        "second",
+        "semester"
+      ],
+      "chunks_matched": {
+        "all words": 6,
+        "content words": 12
+      }
+    },
+    {
+      "question": "Wie viele Credits braucht man für den Eintritt in den dritten Studienabschnitt?",
+      "expected": "mindestens 100 Credits, alle Prüfungen des 1. Abschnitts bestanden (§ 8 Abs. 4)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "Informatik p.2: Es gliedert sich in drei Studienabschnitte: erster Studienabschnitt (1. und 2. Studienseme"
+        ],
+        "keyword (all words)": [
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "Informatik p.11: TN5) (—) Summen für dritten Studienabschnitt: 60 38 *) Angaben in Klammern geben den jewei"
+        ],
+        "keyword (content words)": [
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "Informatik p.2: Es gliedert sich in drei Studienabschnitte: erster Studienabschnitt (1. und 2. Studienseme"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "Informatik p.3: (4) Im dritten Studienabschnitt vertiefen die Studierenden ihre Kenntnisse durch die Wahlp"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "TechnischeInformatik p.2: Es gliedert sich in drei Studienabschnitte: erster Studienabschnitt (1. und 2. Studienseme"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "TechnischeInformatik p.2: Es gliedert sich in drei Studienabschnitte: erster Studienabschnitt (1. und 2. Studienseme"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "TechnischeInformatik p.2: Es gliedert sich in drei Studienabschnitte: erster Studienabschnitt (1. und 2. Studienseme"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.4: (4) In den dritten Studienabschnitt darf eintreten, wer alle Prüfungen des ersten Studiena",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.4: 8 und 6 gemäß Anlage) zu erbringen (Grundlagen- und Orientierungsprüfung). Sind sie bis zu",
+          "TechnischeInformatik p.2: Es gliedert sich in drei Studienabschnitte: erster Studienabschnitt (1. und 2. Studienseme"
+        ]
+      },
+      "terms": [
+        "viele",
+        "credits",
+        "braucht",
+        "eintritt",
+        "dritten",
+        "studienabschnitt"
+      ],
+      "chunks_matched": {
+        "all words": 97,
+        "content words": 36
+      }
+    },
+    {
+      "question": "What academic degree do graduates receive?",
+      "expected": "Bachelor of Science (B.Sc.) (§ 13 Abs. 2)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": null,
+        "keyword (content words)": null,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag"
+        ],
+        "keyword (all words)": [],
+        "keyword (content words)": [],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag"
+        ],
+        "hybrid (content words)": [
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag"
+        ],
+        "hybrid + dedupe": [
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "TechnischeInformatik p.6: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "TechnischeInformatik p.2: (2) Im ersten Studienabschnitt werden Grundlagen gelehrt. Die Studierenden erhalten einen "
+        ],
+        "hybrid kw x0.5": [
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "TechnischeInformatik p.6: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "TechnischeInformatik p.2: (2) Im ersten Studienabschnitt werden Grundlagen gelehrt. Die Studierenden erhalten einen "
+        ],
+        "hybrid kw x0.25": [
+          "TechnischeInformatik p.6: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni",
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "TechnischeInformatik p.6: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag",
+          "TechnischeInformatik p.2: (2) Im ersten Studienabschnitt werden Grundlagen gelehrt. Die Studierenden erhalten einen "
+        ]
+      },
+      "terms": [
+        "academic",
+        "degree",
+        "graduates",
+        "receive"
+      ],
+      "chunks_matched": {
+        "all words": 0,
+        "content words": 0
+      }
+    },
+    {
+      "question": "How many credits is the practical semester worth?",
+      "expected": "26 credits: internship 24 + seminar 2 (Anlage, Modul 22)",
+      "ranks": {
+        "vector": 6,
+        "keyword (all words)": 1,
+        "keyword (content words)": 3,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 2,
+        "hybrid + dedupe": 2,
+        "hybrid kw x0.5": 2,
+        "hybrid kw x0.25": 3
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien"
+        ],
+        "keyword (all words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5"
+        ],
+        "keyword (content words)": [
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I"
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu"
+        ],
+        "hybrid (content words)": [
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten"
+        ],
+        "hybrid + dedupe": [
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten"
+        ],
+        "hybrid kw x0.5": [
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien"
+        ],
+        "hybrid kw x0.25": [
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "TechnischeInformatik p.4: (3) Die Zulassung zum Praktikum (Modul Nr. 22.1 gemäß Anlage) setzt voraus, dass mindesten",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.4: (2) Zum Eintritt in den zweiten Studienabschnitt ist nur berechtigt, wer im ersten Studien",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S"
+        ]
+      },
+      "terms": [
+        "credits",
+        "practical",
+        "semester",
+        "worth"
+      ],
+      "chunks_matched": {
+        "all words": 24,
+        "content words": 28
+      }
+    },
+    {
+      "question": "Wie lange ist die Amtszeit der Prüfungskommission?",
+      "expected": "drei Jahre (§ 10)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "TechnischeInformatik p.4: § 10 Prüfungskommission (1) Für den Studiengang wird eine Prüfungskommission gebildet. Sie",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "TechnischeInformatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest"
+        ],
+        "keyword (all words)": [
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "TechnischeInformatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest"
+        ],
+        "keyword (content words)": [
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "TechnischeInformatik p.4: § 10 Prüfungskommission (1) Für den Studiengang wird eine Prüfungskommission gebildet. Sie",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "TechnischeInformatik p.4: § 10 Prüfungskommission (1) Für den Studiengang wird eine Prüfungskommission gebildet. Sie",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest"
+        ],
+        "hybrid (content words)": [
+          "TechnischeInformatik p.4: § 10 Prüfungskommission (1) Für den Studiengang wird eine Prüfungskommission gebildet. Sie",
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest"
+        ],
+        "hybrid + dedupe": [
+          "TechnischeInformatik p.4: § 10 Prüfungskommission (1) Für den Studiengang wird eine Prüfungskommission gebildet. Sie",
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest"
+        ],
+        "hybrid kw x0.5": [
+          "TechnischeInformatik p.4: § 10 Prüfungskommission (1) Für den Studiengang wird eine Prüfungskommission gebildet. Sie",
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest"
+        ],
+        "hybrid kw x0.25": [
+          "TechnischeInformatik p.4: § 10 Prüfungskommission (1) Für den Studiengang wird eine Prüfungskommission gebildet. Sie",
+          "Informatik p.4: Wiederbestellung ist möglich. (2) Für jedes Mitglied der Prüfungskommission wird ein Ersat",
+          "Informatik p.4: (2) Vor der Teilnahme an einer zweiten Wiederholungsprüfung werden die Studierenden aufgef",
+          "TechnischeInformatik p.5: (2) Für jedes Mitglied der Prüfungskommission wird ein Ersatzmitglied bestellt. Die Amtsze",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest"
+        ]
+      },
+      "terms": [
+        "lange",
+        "amtszeit",
+        "prüfungskommission"
+      ],
+      "chunks_matched": {
+        "all words": 107,
+        "content words": 8
+      }
+    },
+    {
+      "question": "How many credits does the Databases module have?",
+      "expected": "7 credits (Anlage, Modul 12)",
+      "ranks": {
+        "vector": 11,
+        "keyword (all words)": 4,
+        "keyword (content words)": 5,
+        "hybrid (all words)": 3,
+        "hybrid (content words)": 4,
+        "hybrid + dedupe": 4,
+        "hybrid kw x0.5": 4,
+        "hybrid kw x0.25": 7
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre"
+        ],
+        "keyword (all words)": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "TechnischeInformatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 ",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5",
+          "Informatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 "
+        ],
+        "keyword (content words)": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 ",
+          "TechnischeInformatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 ",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5",
+          "TechnischeInformatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 "
+        ],
+        "hybrid (content words)": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5",
+          "Informatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5",
+          "Informatik p.10: III. Übersicht über Module, Leistungsnachweise und Credits im 3. Studienabschnitt 1 2 3 4 "
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.8: II. Übersicht über Module, Leistungsnachweise und Credits im 2. Studienabschnitt 1 2 3 4 5",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang I",
+          "TechnischeInformatik p.7: Anlage: Übersicht über die Module, Leistungsnachweise und Credits im Bachelorstudiengang T",
+          "Informatik p.3: § 6 Module und Leistungsnachweise (1) Für die erbrachten Studienleistungen werden ECTS-Cre",
+          "TechnischeInformatik p.3: Ein Credit entspricht im Durchschnitt einer Arbeitsbelastung für Präsenz- und Selbststudiu",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar"
+        ]
+      },
+      "terms": [
+        "credits",
+        "databases",
+        "module",
+        "have"
+      ],
+      "chunks_matched": {
+        "all words": 43,
+        "content words": 43
+      }
+    },
+    {
+      "question": "Was ist die Regelstudienzeit des Bachelorstudiums?",
+      "expected": "sieben Studiensemester (§ 4 Abs. 1)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule ",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "Informatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Informatik an der Ostbayerischen ",
+          "TechnischeInformatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Technische Informatik an der Ostb",
+          "Informatik p.1: August 2014 in der jeweils gültigen Fassung. § 2 Studienziel (1) Die Studierenden erwerben"
+        ],
+        "keyword (all words)": [
+          "TechnischeInformatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.2: (3) Die Studienbewerberinnen und Studienbewerber erbringen einen Nachweis über Englischken",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule"
+        ],
+        "keyword (content words)": [
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule "
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule ",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "Informatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "TechnischeInformatik p.5: (5) Die Bearbeitungszeit kann bis zu fünf Monate umfassen, wenn die Bachelorarbeit spätest",
+          "Informatik p.2: (2) Im ersten Studienabschnitt werden Grundlagen gelehrt. Die Studierenden erhalten einen "
+        ],
+        "hybrid (content words)": [
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule ",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "Informatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Informatik an der Ostbayerischen ",
+          "TechnischeInformatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Technische Informatik an der Ostb",
+          "Informatik p.1: August 2014 in der jeweils gültigen Fassung. § 2 Studienziel (1) Die Studierenden erwerben"
+        ],
+        "hybrid + dedupe": [
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule ",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "Informatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Informatik an der Ostbayerischen ",
+          "TechnischeInformatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Technische Informatik an der Ostb",
+          "Informatik p.1: August 2014 in der jeweils gültigen Fassung. § 2 Studienziel (1) Die Studierenden erwerben"
+        ],
+        "hybrid kw x0.5": [
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule ",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "Informatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Informatik an der Ostbayerischen ",
+          "TechnischeInformatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Technische Informatik an der Ostb",
+          "Informatik p.1: August 2014 in der jeweils gültigen Fassung. § 2 Studienziel (1) Die Studierenden erwerben"
+        ],
+        "hybrid kw x0.25": [
+          "TechnischeInformatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit einem von der Hochschule ",
+          "Informatik p.2: Dafür ist ein Vertragsverhältnis der Studentin/des Studenten mit e inem von der Hochschule",
+          "Informatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Informatik an der Ostbayerischen ",
+          "TechnischeInformatik p.1: Studien- und Prüfungsordnung für den Bachelorstudiengang Technische Informatik an der Ostb",
+          "Informatik p.1: August 2014 in der jeweils gültigen Fassung. § 2 Studienziel (1) Die Studierenden erwerben"
+        ]
+      },
+      "terms": [
+        "regelstudienzeit",
+        "bachelorstudiums"
+      ],
+      "chunks_matched": {
+        "all words": 91,
+        "content words": 2
+      }
+    },
+    {
+      "question": "In which semester does the practical semester take place?",
+      "expected": "5th semester (§ 4 Abs. 3, § 5 Abs. 1)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 8,
+        "keyword (content words)": 5,
+        "hybrid (all words)": 4,
+        "hybrid (content words)": 5,
+        "hybrid + dedupe": 4,
+        "hybrid kw x0.5": 4,
+        "hybrid kw x0.25": 4
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.3: § 5 Praktisches Studiensemester (1) Das praktische Studiensemester findet im 5. Studiensem",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei"
+        ],
+        "keyword (all words)": [
+          "Informatik p.12: Abkürzungen Prüfungsleistungen BA Bachelorarbeit m.E. Bewertung mit/ohne Erfolg THE Take-H",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.12: Abkürzungen Prüfungsleistungen BA Bachelorarbeit m.E. Bewertung mit/ohne Erfolg THE Take-H",
+          "TechnischeInformatik p.6: Über die Verleihung des akademischen Grads wird eine Urkunde gemäß dem Muster in der Anlag"
+        ],
+        "keyword (content words)": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.12: Abkürzungen Prüfungsleistungen BA Bachelorarbeit m.E. Bewertung mit/ohne Erfolg THE Take-H",
+          "Informatik p.12: Abkürzungen Prüfungsleistungen BA Bachelorarbeit m.E. Bewertung mit/ohne Erfolg THE Take-H",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au"
+        ],
+        "hybrid (all words)": [
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "Informatik p.11: 1 2 3 4 5 6 7 8 9 10 Modul Nr. Modulbezeichnung (in englischer Sprache) Credits*) SWS*) Ar",
+          "TechnischeInformatik p.3: Dieser Studienabschnitt beinhaltet auch die Anfertigung der Bachelorarbeit im 7. Studiense",
+          "Informatik p.3: (4) Im dritten Studienabschnitt vertiefen die Studierenden ihre Kenntnisse durch die Wahlp"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 21 Seminar Informatik (Seminar Computer S",
+          "TechnischeInformatik p.9: studienbegleitender LN Zulassungsvoraussetzungen 22 Praktisches Studiensemester (Practical",
+          "TechnischeInformatik p.12: mit Übungen Ü Übung Pr Praktikum V Vorlesung S Seminar SUW seminaristischer Unterricht bei",
+          "Informatik p.3: (2) Die Pflicht- und Wahlpflichtmodule, ihre Semesterwochenstundenzahl, die Art der Lehrve",
+          "TechnischeInformatik p.3: Studierende müssen unter ihnen gemäß dieser Studien- und Prüfungsordnung eine bestimmte Au"
+        ]
+      },
+      "terms": [
+        "semester",
+        "practical",
+        "take",
+        "place"
+      ],
+      "chunks_matched": {
+        "all words": 64,
+        "content words": 10
+      }
+    },
+    {
+      "question": "Was passiert, wenn die Präsentation im Bachelorseminar ohne Erfolg bewertet wird?",
+      "expected": "einmalige Wiederholung innerhalb eines Monats (§ 11 Abs. 6)",
+      "ranks": {
+        "vector": 1,
+        "keyword (all words)": 1,
+        "keyword (content words)": 1,
+        "hybrid (all words)": 1,
+        "hybrid (content words)": 1,
+        "hybrid + dedupe": 1,
+        "hybrid kw x0.5": 1,
+        "hybrid kw x0.25": 1
+      },
+      "top5": {
+        "vector": [
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "keyword (all words)": [
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni"
+        ],
+        "keyword (content words)": [
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: § 13 Zeugnis und akademischer Grad (1) Über die bestandene Bachelorprüfung wird ein Zeugni"
+        ],
+        "hybrid (all words)": [
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "hybrid (content words)": [
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.12: mit Präsentation TN Teilnahme Kol Kolloquium Pf Portfolioprüfung schrB schriftlicher Beric"
+        ],
+        "hybrid + dedupe": [
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.12: mit Präsentation TN Teilnahme Kol Kolloquium Pf Portfolioprüfung schrB schriftlicher Beric"
+        ],
+        "hybrid kw x0.5": [
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ],
+        "hybrid kw x0.25": [
+          "Informatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: Wird diese Teilleistung mit „ohne Erfolg“ bewertet, kann sie einmalig innerhalb von einem ",
+          "TechnischeInformatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "Informatik p.5: (6) Die Bachelorarbeit ist im Rahmen des Bachelorseminars (Modul Nr. 32.2 gemäß Anlage) mü",
+          "TechnischeInformatik p.5: (2) Das Thema der Bachelorarbeit wird frühestens im sechsten Studiensemester ausgegeben. V"
+        ]
+      },
+      "terms": [
+        "passiert",
+        "präsentation",
+        "bachelorseminar",
+        "ohne",
+        "erfolg",
+        "bewertet"
+      ],
+      "chunks_matched": {
+        "all words": 98,
+        "content words": 18
+      }
+    }
+  ]
+}

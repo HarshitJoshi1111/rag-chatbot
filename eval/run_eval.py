@@ -63,6 +63,6 @@ if __name__ == "__main__":
     if not items:
         sys.exit(f"No questions in {path}. Add one JSON object per line.")
     print(f"{'mode':<8} {'k':>3} {'hit@k':>7} {'MRR':>7}")
-    for mode in ("vector", "hybrid"):
+    for mode in ("vector", "keyword", "hybrid"):
         r = evaluate(items, mode, TOP_K)
         print(f"{r['mode']:<8} {r['k']:>3} {r['hit_rate']:>7.3f} {r['mrr']:>7.3f}")
