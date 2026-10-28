@@ -22,7 +22,7 @@ from pathlib import Path
 from app.config import TOP_K
 from app.db import get_conn
 from app.retrieve import drop_duplicates, hybrid_search, keyword_search, keyword_terms, rrf_merge, vector_search
-from eval.run_eval import first_correct_rank, load_items
+from eval.run_eval import answerable, first_correct_rank, load_items
 
 DEPTH = 20
 FINAL = "hybrid kw x0.5"  # the variant used by the app; its misses are listed in detail
@@ -58,7 +58,7 @@ VARIANTS = {
 
 
 def run() -> dict:
-    items = load_items("eval/questions.jsonl")
+    items = answerable(load_items("eval/questions.jsonl"))
     rows = []
     with get_conn() as conn:
         total = conn.execute("SELECT count(*) FROM chunks").fetchone()[0]
