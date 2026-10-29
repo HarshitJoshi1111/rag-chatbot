@@ -1,7 +1,7 @@
 """Retrieval: vector search, keyword search, and hybrid search with Reciprocal Rank Fusion (RRF)."""
 import re
 
-from app.config import KEYWORD_WEIGHT
+from app.config import KEYWORD_WEIGHT, RERANK, RERANK_CANDIDATES
 from app.embeddings import embed_query
 
 _COLS = "id, doc_name, page, content"
@@ -85,8 +85,13 @@ def drop_duplicates(hits: list[dict]) -> list[dict]:
     return unique
 
 
-def search(conn, query: str, k: int, mode: str = "hybrid", dedupe: bool = True) -> list[dict]:
-    """mode: "hybrid" (default), "vector" or "keyword". Fetches extra candidates so that k remain after dedupe."""
+def search(conn, query: str, k: int, mode: str = "hybrid", dedupe: bool = True, rerank: bool | None = None) -> list[dict]:
+    """mode: "hybrid" (default), "vector" or "keyword". Fetches extra candidates so that k remain after dedupe.
+    With rerank, the top RERANK_CANDIDATES results are re-ordered by a cross-encoder before taking k."""
+    if RERANK if rerank is None else rerank:
+        from app.rerank import rerank as rerank_hits  # imported lazily: loads a second model
+
+        return rerank_hits(query, search(conn, query, max(k, RERANK_CANDIDATES), mode, dedupe, rerank=False), k)
     n = k * 3 if dedupe else k
     if mode == "vector":
         hits = [{**h, "score": h["vector_score"]} for h in vector_search(conn, query, n)]

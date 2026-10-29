@@ -46,16 +46,16 @@ def first_correct_rank(results: list[dict], item: dict) -> int | None:
     return next((i for i, h in enumerate(results, start=1) if is_match(h, item)), None)
 
 
-def evaluate(items: list[dict], mode: str, k: int) -> dict:
+def evaluate(items: list[dict], mode: str, k: int, rerank: bool = False) -> dict:
     items = answerable(items)
     ranks = []
     with get_conn() as conn:
         for item in items:
-            ranks.append(first_correct_rank(search(conn, item["question"], k, mode), item))
+            ranks.append(first_correct_rank(search(conn, item["question"], k, mode, rerank=rerank), item))
     n = len(items)
     found = [r for r in ranks if r]
     return {
-        "mode": mode,
+        "mode": mode + (" + rerank" if rerank else ""),
         "k": k,
         "questions": n,
         "hit_rate": round(len(found) / n, 3),
@@ -69,7 +69,7 @@ if __name__ == "__main__":
     items = load_items(path)
     if not items:
         sys.exit(f"No questions in {path}. Add one JSON object per line.")
-    print(f"{'mode':<8} {'k':>3} {'hit@k':>7} {'MRR':>7}")
-    for mode in ("vector", "keyword", "hybrid"):
-        r = evaluate(items, mode, TOP_K)
-        print(f"{r['mode']:<8} {r['k']:>3} {r['hit_rate']:>7.3f} {r['mrr']:>7.3f}")
+    print(f"{'mode':<16} {'k':>3} {'hit@k':>7} {'MRR':>7}")
+    for mode, rerank in (("vector", False), ("keyword", False), ("hybrid", False), ("hybrid", True)):
+        r = evaluate(items, mode, TOP_K, rerank)
+        print(f"{r['mode']:<16} {r['k']:>3} {r['hit_rate']:>7.3f} {r['mrr']:>7.3f}")

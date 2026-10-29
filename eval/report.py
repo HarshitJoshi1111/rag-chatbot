@@ -20,7 +20,7 @@ import sys
 import time
 from pathlib import Path
 
-from app.config import LLM_MODEL, TOP_K
+from app.config import LLM_MODEL, PROMPT_VERSION, RERANK, TOP_K
 from app.db import get_conn
 from app.llm import generate_answer
 from app.retrieve import search
@@ -30,9 +30,10 @@ OUT = Path("experiments/results")
 BOOTSTRAP_SAMPLES = 2000
 
 REFUSAL = re.compile(
-    r"keine (explizite |genaue |konkrete )?(angabe|information|antwort)"
+    r"keine (explizite |genaue |konkrete )?(angabe|information|antwort|zahl)"
     r"|nicht (direkt |explizit |genau )?(im|in den|angegeben|enthalten|zu finden|erwähnt|beantwort|bestätigen|bestimmen)"
-    r"|no information|not (mentioned|contain|found|specified|provided|stated)|does not (say|contain|mention|specify)"
+    r"|no information|not (explicitly |directly )?(mentioned|contain|found|specified|provided|stated)"
+    r"|do(es)? not (say|contain|mention|specify)"
     r"|cannot (find|answer)|don't know|do not know|weiß (ich )?nicht",
     re.IGNORECASE,
 )
@@ -69,8 +70,9 @@ def bootstrap_ci(values: list[float], seed: int = 0) -> tuple[float, float]:
 def retrieval(items: list[dict]) -> dict:
     qs = answerable(items)
     out = {}
-    for mode in ("vector", "keyword", "hybrid"):
-        r = evaluate(qs, mode, TOP_K)
+    for mode, rerank in (("vector", False), ("keyword", False), ("hybrid", False), ("hybrid", True)):
+        r = evaluate(qs, mode, TOP_K, rerank)
+        mode = r["mode"]
         hits = [1.0 if x and x <= TOP_K else 0.0 for x in r["ranks"]]
         rr = [1 / x if x else 0.0 for x in r["ranks"]]
         by_lang = {lang: round(statistics.mean(h for h, q in zip(hits, qs) if q["lang"] == lang), 3) for lang in ("en", "de")}
@@ -91,13 +93,14 @@ def score(item: dict, text: str, seconds: float) -> dict:
     }
 
 
-def answers(items: list[dict]) -> list[dict]:
+def answers(items: list[dict], model: str | None = None, prompt: str | None = None, rerank: bool | None = None) -> list[dict]:
+    """Run the pipeline on every question. None = the app's configured default."""
     rows = []
     for item in items:
         start = time.perf_counter()
         with get_conn() as conn:
-            hits = search(conn, item["question"], TOP_K)
-        text = generate_answer(item["question"], hits).strip()
+            hits = search(conn, item["question"], TOP_K, rerank=rerank)
+        text = generate_answer(item["question"], hits, model=model, prompt=prompt).strip()
         rows.append(score(item, text, round(time.perf_counter() - start, 1)))
     return rows
 
@@ -118,14 +121,15 @@ def to_markdown(ret: dict, rows: list[dict], n_items: int) -> str:
     detected = [r for r in ans if r["answer_lang"]]
     lang_ok = sum(1 for r in detected if r["answer_lang"] == r["lang"])
     secs = [r["seconds"] for r in rows]
-    hybrid_ranks = ret["hybrid"]["ranks"]
+    hybrid_ranks = ret["hybrid + rerank" if RERANK else "hybrid"]["ranks"]
     retrieval_misses = sum(1 for r, rank in zip(ans, hybrid_ranks) if not r["fact_correct"] and not (rank and rank <= TOP_K))
     generation_misses = sum(1 for r, rank in zip(ans, hybrid_ranks) if not r["fact_correct"] and rank and rank <= TOP_K)
     lines = [
         "# Evaluation",
         "",
         f"{n_items} questions ({sum(1 for r in rows if r['lang'] == 'en')} English, {sum(1 for r in rows if r['lang'] == 'de')} German), "
-        f"{len(ans)} answerable and {len(unans)} not answerable from the documents. LLM: `{LLM_MODEL}`, top-{TOP_K} retrieval.",
+        f"{len(ans)} answerable and {len(unans)} not answerable from the documents. LLM: `{LLM_MODEL}`, prompt {PROMPT_VERSION}, "
+        f"top-{TOP_K} retrieval{' with re-ranking' if RERANK else ''}.",
         "",
         "## Retrieval (answerable questions)",
         "",
@@ -137,7 +141,7 @@ def to_markdown(ret: dict, rows: list[dict], n_items: int) -> str:
                      f"{m['mrr_ci'][0]:.2f}–{m['mrr_ci'][1]:.2f} | {m['hit_by_lang']['en']:.2f} | {m['hit_by_lang']['de']:.2f} |")
     lines += [
         "",
-        "## Answers (hybrid search + LLM)",
+        "## Answers (the app's default pipeline)",
         "",
         "| metric | result |",
         "|---|---|",
@@ -158,10 +162,10 @@ def to_markdown(ret: dict, rows: list[dict], n_items: int) -> str:
         "",
         "## Every answer",
         "",
-        "| # | lang | question | expected | answer | fact | cited | retrieval rank (hybrid) |",
+        "| # | lang | question | expected | answer | fact | cited | retrieval rank |",
         "|---|---|---|---|---|---|---|---|",
     ]
-    ranks = iter(ret["hybrid"]["ranks"])
+    ranks = iter(hybrid_ranks)
     for i, r in enumerate(rows, 1):
         rank = next(ranks) if r["answerable"] else None
         fact = "n/a" if r["fact_correct"] is None else ("yes" if r["fact_correct"] else "no")
@@ -178,7 +182,7 @@ if __name__ == "__main__":
     print("retrieval…")
     ret = retrieval(items)
     for mode, m in ret.items():
-        print(f"  {mode:<8} hit@{TOP_K}={m['hit']:.3f} [{m['hit_ci'][0]:.2f}-{m['hit_ci'][1]:.2f}]  MRR={m['mrr']:.3f}  EN={m['hit_by_lang']['en']:.2f} DE={m['hit_by_lang']['de']:.2f}")
+        print(f"  {mode:<16} hit@{TOP_K}={m['hit']:.3f} [{m['hit_ci'][0]:.2f}-{m['hit_ci'][1]:.2f}]  MRR={m['mrr']:.3f}  EN={m['hit_by_lang']['en']:.2f} DE={m['hit_by_lang']['de']:.2f}")
     if "--rescore" in sys.argv:
         print("re-scoring saved answers…")
         rows = rescore(items)

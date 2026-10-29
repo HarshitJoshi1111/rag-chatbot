@@ -4,7 +4,7 @@ from functools import lru_cache
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from app.config import EMBED_MODEL
+from app.config import EMBED_MODEL, MODEL_DEVICE
 
 # e5 models were trained with these prefixes; other models (e.g. all-MiniLM) don't use them.
 _USES_E5_PREFIX = "e5" in EMBED_MODEL.lower()
@@ -12,7 +12,7 @@ _USES_E5_PREFIX = "e5" in EMBED_MODEL.lower()
 
 @lru_cache(maxsize=1)
 def _model() -> SentenceTransformer:
-    return SentenceTransformer(EMBED_MODEL)
+    return SentenceTransformer(EMBED_MODEL, device=MODEL_DEVICE)
 
 
 def embed_passages(texts: list[str]) -> np.ndarray:
